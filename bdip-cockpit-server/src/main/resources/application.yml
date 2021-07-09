@@ -1,0 +1,22 @@
+server:
+  port: 7777
+  servlet:
+    context-path: /cockpit
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型  使用分布式事务seata时 datasource下不要直接使用druid数据源,
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:mysql://192.168.0.71:3306/ecology?characterEncoding=utf8&useSSL=false&serverTimezone=GMT&rewriteBatchedStatements=true&allowMultiQueries=true
+    url: jdbc:sqlserver://10.193.48.104:1433;databaseName=ecology
+#    username: ecology
+    username: sa
+    password: BIMbim123
+    #  数据源其他配置
+    dbcp2:
+      min-idle: 5         #数据库连接池的最小维持连接数
+      initial-size: 5     #初始化提供的连接数
+      max-total: 5          #最大的连接数
+      max-wait-millis: 200        #等待连接获取的最大超时时间
+  application:
+    name: bdip-cockpit-server  #微服务名称
