@@ -16,7 +16,7 @@ public interface CockpitService {
      * 获取所有项目
      * @return
      */
-    List<Map> getAllProjects();
+    List<Map> getAllProjects(String userid);
 
     /**
      * 获取安全数量
@@ -24,7 +24,12 @@ public interface CockpitService {
      * @param field1
      * @param table2
      * @param field2
+     * @param type
      * @return
      */
-    List<Map> getSaftyData(String table1, String field1, String table2, String field2);
+    Map<String,Object> getSaftyData(String table1, String field1, String table2, String field2, String type);
+
+    List<Map> getWorkflowData(String table, String field);
+
+    String getModelTree(String projectid, String userid);
 }

@@ -8,10 +8,14 @@ spring:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 #    url: jdbc:mysql://192.168.0.71:3306/ecology?characterEncoding=utf8&useSSL=false&serverTimezone=GMT&rewriteBatchedStatements=true&allowMultiQueries=true
-    url: jdbc:sqlserver://10.193.48.104:1433;databaseName=ecology
 #    username: ecology
-    username: sa
-    password: BIMbim123
+#    password: BIMbim123
+    url: jdbc:sqlserver://rm-8vbywjpw4t89o2496.mssql.zhangbei.rds.aliyuncs.com:1433;databaseName=ecology_8070
+    username: bdip
+    password: L@83N^#3Q5c5DrXH
+#    url: jdbc:sqlserver://10.193.48.104:1433;databaseName=ecology
+#    username: sa
+#    password: BIMbim123
     #  数据源其他配置
     dbcp2:
       min-idle: 5         #数据库连接池的最小维持连接数
